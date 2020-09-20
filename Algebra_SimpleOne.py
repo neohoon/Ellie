@@ -7,7 +7,7 @@ def calc_tangent_na(p, q, n):
         return p, q
     # The following method is called recursively unless n becomes 1.
     P, Q = calc_tangent_na(p, q, n-1)
-    out_p = p * P
+    out_p = p * Q + P * q
     out_q = q * Q - p * P
     return out_p, out_q
 
